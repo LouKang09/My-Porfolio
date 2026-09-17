@@ -1,0 +1,156 @@
+.reactor-privacy-note {
+  margin: 0 0 16px;
+  padding: 12px 14px;
+  border: 1px solid #dfe3e8;
+  border-radius: 12px;
+  background: #f7f8fa;
+  color: #4b5563;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.reactor-stats {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 10px;
+  margin-bottom: 14px;
+}
+.reactor-stats article {
+  padding: 14px;
+  border: 1px solid #e1e5eb;
+  border-radius: 12px;
+  background: #fff;
+}
+.reactor-stats strong { display: block; font-size: 22px; line-height: 1.1; }
+.reactor-stats span { display: block; margin-top: 5px; color: #6b7280; font-size: 12px; }
+
+.reactor-toolbar {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 180px;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+.reactor-toolbar input,
+.reactor-toolbar select {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #ccd3dc;
+  border-radius: 10px;
+  padding: 10px 11px;
+  background: #fff;
+  color: #1f2937;
+  font: inherit;
+}
+
+.reactors-list { display: grid; gap: 8px; }
+.reactor-row {
+  display: grid;
+  grid-template-columns: 66px minmax(190px, 1.1fr) minmax(180px, 1fr) 110px;
+  align-items: center;
+  gap: 12px;
+  padding: 10px;
+  border: 1px solid #e1e5eb;
+  border-radius: 12px;
+  background: #fff;
+}
+.reactor-photo {
+  width: 66px;
+  height: 52px;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+  border-radius: 9px;
+  background: #eef1f5;
+  color: #6b7280;
+}
+.reactor-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.reactor-person { display: flex; align-items: center; min-width: 0; gap: 10px; }
+.reactor-avatar {
+  flex: 0 0 34px;
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #1877f2;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 800;
+}
+.reactor-avatar.anonymous { background: #8a8d91; }
+.reactor-person div,
+.reactor-project { min-width: 0; }
+.reactor-person strong,
+.reactor-project strong {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 13px;
+}
+.reactor-person small,
+.reactor-project small {
+  display: block;
+  margin-top: 3px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #6b7280;
+  font-size: 11px;
+}
+.reactor-type {
+  justify-self: end;
+  min-width: 82px;
+  padding: 7px 9px;
+  border-radius: 999px;
+  text-align: center;
+  background: #f0f2f5;
+  color: #4b5563;
+  font-size: 11px;
+}
+.reactor-type span { margin-right: 4px; font-size: 16px; vertical-align: -1px; }
+.reactor-type.reaction-like { background: #e7f3ff; color: #1877f2; }
+.reactor-type.reaction-love { background: #fff0f2; color: #d63354; }
+.reactor-type.reaction-care,
+.reactor-type.reaction-haha,
+.reactor-type.reaction-wow,
+.reactor-type.reaction-sad { background: #fff8e6; color: #9a6700; }
+.reactor-type.reaction-angry { background: #fff1e6; color: #b24b00; }
+.reactor-loading,
+.reactor-empty {
+  padding: 28px 18px;
+  border: 1px dashed #cfd5dd;
+  border-radius: 12px;
+  text-align: center;
+  color: #6b7280;
+  background: #fafbfc;
+}
+.reactor-empty strong { display: block; margin-bottom: 5px; color: #374151; }
+.reactor-empty p { margin: 3px 0; }
+
+@media (max-width: 1100px) {
+  .reactor-stats { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .reactor-row { grid-template-columns: 58px minmax(160px, 1fr) minmax(160px, 1fr) 90px; }
+  .reactor-photo { width: 58px; height: 46px; }
+}
+
+@media (max-width: 760px) {
+  .reactor-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .reactor-toolbar { grid-template-columns: 1fr; }
+  .reactor-row {
+    grid-template-columns: 52px minmax(0, 1fr) auto;
+    align-items: start;
+  }
+  .reactor-photo { width: 52px; height: 46px; grid-row: 1 / span 2; }
+  .reactor-person { grid-column: 2; }
+  .reactor-project { grid-column: 2; }
+  .reactor-type { grid-column: 3; grid-row: 1 / span 2; align-self: center; }
+}
+
+@media (max-width: 480px) {
+  .reactor-stats { grid-template-columns: 1fr 1fr; }
+  .reactor-stats article { padding: 11px; }
+  .reactor-row { grid-template-columns: 46px minmax(0, 1fr); }
+  .reactor-photo { width: 46px; height: 42px; }
+  .reactor-type { grid-column: 2; grid-row: auto; justify-self: start; margin-top: 2px; }
+}
