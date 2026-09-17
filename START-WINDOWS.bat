@@ -15,5 +15,11 @@ echo.
 echo Keep this window open while using the website.
 echo.
 start "" cmd /c "timeout /t 2 /nobreak >nul & start "" http://localhost:3000"
+node hydrate-assets.js
+if errorlevel 1 (
+  echo Failed to prepare website assets.
+  pause
+  exit /b 1
+)
 node server.js
 pause
