@@ -8,4 +8,5 @@ echo "Starting Facebook Resume CMS..."
 echo "Public website: http://localhost:3000"
 echo "Admin login:    http://localhost:3000/admin.html"
 echo "Keep this terminal open while using the website."
+node hydrate-assets.js || exit 1
 node server.js
