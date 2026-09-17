@@ -1,11 +1,11 @@
 {
   "name": "facebook-resume-cms",
-  "version": "2.3.2",
+  "version": "2.4.0",
   "private": true,
-  "description": "Facebook-inspired resume portfolio with a secure admin CMS, uploads, searchable public profile, and Railway-ready persistent storage.",
+  "description": "Facebook-inspired resume portfolio with a secure admin CMS, uploads, search, and an interactive social project gallery.",
   "scripts": {
-    "start": "node hydrate-assets.js && node server.js",
-    "dev": "node hydrate-assets.js && node --watch server.js"
+    "start": "node hydrate-assets.js && node gallery-bootstrap.js",
+    "dev": "node hydrate-assets.js && node --watch gallery-bootstrap.js"
   },
   "engines": {
     "node": ">=20"
