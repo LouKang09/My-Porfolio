@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f0f2f5" />
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+  <meta name="description" content="A social-profile inspired professional resume and portfolio." />
+  <title>Resume & Portfolio</title>
+  <link rel="stylesheet" href="styles.css?v=232" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="topbar-left">
+        <button class="brand nav-target" data-target="overview"><span class="brand-mark" data-bind="initials">MK</span><span class="brand-name" data-bind="name">Resume</span></button>
+        <div class="search-wrap" id="searchWrap">
+          <span class="search-icon" aria-hidden="true">⌕</span>
+          <input id="siteSearch" type="search" autocomplete="off" spellcheck="false" placeholder="Search my experience" aria-label="Search resume" aria-expanded="false" aria-controls="searchResults" />
+          <button id="searchClear" class="search-clear" type="button" aria-label="Clear search" hidden>×</button>
+          <div id="searchResults" class="search-results" role="listbox" hidden></div>
+        </div>
+      </div>
+      <nav class="desktop-nav" aria-label="Primary">
+        <button class="icon-btn nav-target" data-target="overview" title="Overview">⌂</button>
+        <button class="icon-btn nav-target" data-target="experience" title="Experience">▣</button>
+        <button class="icon-btn nav-target" data-target="projects" title="Projects">&lt;/&gt;</button>
+        <button class="icon-btn nav-target" data-target="contact" title="Contact">✉</button>
+      </nav>
+      <div class="top-actions"><a href="/admin.html" class="icon-btn admin-login" title="Admin login">⚙</a><button id="themeToggle" class="icon-btn" title="Toggle theme">☾</button><button id="menuOpen" class="icon-btn menu-button" title="Menu">☰</button></div>
+    </div>
+  </header>
+
+  <div id="mobileBackdrop" class="mobile-drawer-backdrop" hidden>
+    <aside class="mobile-drawer">
+      <div class="drawer-title"><strong>Navigate</strong><button id="menuClose" class="icon-btn">×</button></div>
+      <button class="nav-target" data-target="overview">Overview</button><button class="nav-target" data-target="experience">Experience</button><button class="nav-target" data-target="projects">Projects</button><button class="nav-target" data-target="skills">Skills</button><button class="nav-target" data-target="education">Education</button><button class="nav-target" data-target="contact">Contact</button>
+      <a class="drawer-admin" href="/admin.html">⚙ Admin Login</a>
+    </aside>
+  </div>
+
+  <main>
+    <section id="overview" class="profile-wrap section-anchor">
+      <div id="cover" class="cover"><div class="cover-grid"></div><div class="cover-copy"><span id="coverEyebrow" class="eyebrow"></span><strong id="coverTitle"></strong></div></div>
+      <div class="profile-header card-flat">
+        <div class="profile-main"><div id="avatar" class="avatar"><span data-bind="initials">MK</span></div><div class="identity"><h1 data-bind="name">Resume</h1><p data-bind="headline"></p><span>⌖ <span data-bind="location"></span></span></div></div>
+        <div class="profile-actions"><button class="primary-btn nav-target" data-target="contact">✉ Contact Me</button><a id="downloadResume" class="secondary-btn resume-download disabled" href="#" aria-disabled="true" title="Upload your resume from Admin first">⇩ Download Resume</a></div>
+      </div>
+      <div class="profile-tabs"><button class="nav-target" data-target="overview">Overview</button><button class="nav-target" data-target="experience">Experience</button><button class="nav-target" data-target="projects">Projects</button><button class="nav-target" data-target="skills">Skills</button><button class="nav-target" data-target="education">Education</button><button class="nav-target" data-target="contact">Contact</button></div>
+    </section>
+
+    <section class="content-grid">
+      <aside class="left-column">
+        <section class="card"><div class="card-heading"><h2>Intro</h2></div><p class="intro-bio" data-bind="about"></p><div class="detail-list"><div>▣ <span data-bind="availability"></span></div><div>⌖ <span>Based in <span data-bind="location"></span></span></div><div>✉ <span data-bind="email"></span></div><div>↗ <span data-bind="website"></span></div></div><div class="social-row"><a id="githubLink" href="#" aria-label="GitHub" target="_blank" rel="noreferrer">GH</a><a id="linkedinLink" href="#" aria-label="LinkedIn" target="_blank" rel="noreferrer">in</a><a id="facebookLink" href="#" aria-label="Facebook" target="_blank" rel="noreferrer">f</a><a id="emailLink" href="#" aria-label="Email">@</a></div></section>
+        <section id="skills" class="card section-anchor"><div class="card-heading"><h2>Skills</h2><span>⚙</span></div><div id="skillsContainer" class="skill-groups"></div></section>
+        <section id="education" class="card section-anchor"><div class="card-heading"><h2>Education</h2><span>🎓</span></div><div id="educationContainer"></div><div class="subsection-title">Certifications & Training</div><ul id="certContainer" class="cert-list"></ul></section>
+      </aside>
+
+      <section class="feed-column">
+        <div class="composer card"><div class="mini-avatar" data-bind="initials">MK</div><button class="nav-target" data-target="contact">Interested in working together? Send me a message.</button><span>➤</span></div>
+        <section id="projects" class="card section-anchor"><div class="card-heading"><div><h2>Featured Projects</h2><p>Selected systems and products I’ve worked on.</p></div><span>&lt;/&gt;</span></div><div id="projectGrid" class="project-grid"></div></section>
+        <div id="experience" class="section-anchor"></div>
+        <section class="card timeline-card"><div class="card-heading"><div><h2>Career Timeline</h2><p>Milestones presented like professional updates.</p></div><span>◷</span></div><div id="timelineContainer" class="timeline"></div><button id="timelineToggle" class="full-btn">See more milestones</button></section>
+        <section class="card gallery-card"><div class="card-heading"><div><h2>Project Gallery</h2><p>Selected screenshots and work samples.</p></div></div><div id="galleryGrid" class="gallery-grid"></div></section>
+        <section id="contact" class="card contact-card section-anchor">
+          <div class="contact-copy"><span class="eyebrow">LET’S CONNECT</span><h2>Have a system, website, or automation idea?</h2><p>Send a message here. It will appear privately in the admin dashboard.</p><div class="contact-points"><span>✉ <span data-bind="email"></span></span><span>⌖ <span data-bind="location"></span></span></div></div>
+          <form id="contactForm"><label>Name<input required name="name" maxlength="120" placeholder="Your name" /></label><label>Email<input required type="email" name="email" maxlength="200" placeholder="you@example.com" /></label><label>Subject<input name="subject" maxlength="200" placeholder="Project inquiry" /></label><label>Message<textarea required name="message" maxlength="5000" rows="5" placeholder="Tell me about your project..."></textarea></label><button class="primary-btn" type="submit">➤ Send Message</button><small id="formStatus" class="success"></small></form>
+        </section>
+      </section>
+    </section>
+  </main>
+
+  <footer><div><span class="brand-mark small" data-bind="initials">MK</span><strong data-bind="name">Resume</strong></div><p>Social-profile inspired professional resume</p><div class="footer-actions"><a href="/admin.html">Admin</a><button class="nav-target" data-target="overview">Back to top</button></div></footer>
+  <script src="/app-v2.3.2.js?v=232"></script>
+</body>
+</html>
