@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex,nofollow" />
+  <title>Resume Admin</title>
+  <link rel="stylesheet" href="admin.css" />
+</head>
+<body>
+  <section id="loginView" class="login-shell">
+    <form id="loginForm" class="login-card">
+      <div class="login-logo">MK</div><h1>Resume Admin</h1><p>Sign in to update your public profile, projects, images, and messages.</p>
+      <label>Username<input name="username" autocomplete="username" required value="admin" /></label>
+      <label>Password<input name="password" type="password" autocomplete="current-password" required /></label>
+      <button class="primary" type="submit">Log in</button><small id="loginStatus"></small>
+      <a href="/">← Back to public website</a>
+    </form>
+  </section>
+
+  <div id="adminView" class="admin-shell" hidden>
+    <aside class="sidebar">
+      <div class="sidebar-brand"><span>MK</span><div><strong>Resume CMS</strong><small>Admin dashboard</small></div></div>
+      <nav id="adminNav">
+        <button class="active" data-panel="dashboard">⌂ Dashboard</button><button data-panel="profile">◉ Profile</button><button data-panel="experience">▣ Experience</button><button data-panel="projects">&lt;/&gt; Projects</button><button data-panel="skills">⚙ Skills</button><button data-panel="timeline">◷ Timeline</button><button data-panel="education">🎓 Education</button><button data-panel="certifications">✓ Certifications</button><button data-panel="gallery">▦ Gallery</button><button data-panel="messages">✉ Messages <span id="messageBadge" class="badge" hidden></span></button><button data-panel="account">🔒 Account</button>
+      </nav>
+      <div class="sidebar-bottom"><a href="/" target="_blank">↗ View public website</a><button id="logoutBtn">⇥ Log out</button></div>
+    </aside>
+
+    <main class="admin-main">
+      <header class="admin-top"><button id="mobileNavBtn" class="mobile-nav">☰</button><div><span id="panelEyebrow">CONTENT MANAGER</span><h1 id="panelTitle">Dashboard</h1></div><div class="save-area"><span id="saveStatus"></span><button id="saveBtn" class="primary">Save Changes</button></div></header>
+      <div id="defaultPasswordNotice" class="notice warning" hidden><strong>Security reminder:</strong> You are using the starter password. Open <b>Account</b> and change it before publishing this website.</div>
+
+      <section id="panel-dashboard" class="panel active-panel">
+        <div class="stats" id="stats"></div>
+        <div class="dashboard-grid"><article class="admin-card"><h2>What you can edit</h2><p>Everything visible on the public résumé can be managed here without editing HTML.</p><div class="feature-list"><span>✓ Profile and cover images</span><span>✓ Downloadable resume upload</span><span>✓ Contact and social links</span><span>✓ Work experience</span><span>✓ Projects, screenshots, and live-site links</span><span>✓ Skills and categories</span><span>✓ Timeline, education, certificates</span><span>✓ Project gallery</span><span>✓ Contact messages</span></div></article><article class="admin-card"><h2>Publishing workflow</h2><ol><li>Choose a section from the menu.</li><li>Edit text, add items, or upload images.</li><li>Click <b>Save Changes</b>.</li><li>Open the public website to review the result.</li></ol><a class="secondary button-link" href="/" target="_blank">Open public website ↗</a></article></div>
+      </section>
+
+      <section id="panel-profile" class="panel"><div class="section-heading"><div><h2>Profile & Branding</h2><p>Manage the information shown in your profile header and Intro card.</p></div></div><div id="profileEditor" class="admin-card"></div></section>
+      <section id="panel-experience" class="panel"><div class="section-heading"><div><h2>Experience</h2><p>Add, edit, reorder, or remove professional experience entries.</p></div><button class="secondary add-btn" data-add="experience">+ Add Experience</button></div><div id="experienceEditor" class="editor-list"></div></section>
+      <section id="panel-projects" class="panel"><div class="section-heading"><div><h2>Projects</h2><p>Manage project cards, links, stacks, and screenshots.</p></div><button class="secondary add-btn" data-add="project">+ Add Project</button></div><div id="projectEditor" class="editor-list"></div></section>
+      <section id="panel-skills" class="panel"><div class="section-heading"><div><h2>Skills</h2><p>Create skill groups and list the technologies inside each group.</p></div><button class="secondary add-btn" data-add="skill">+ Add Skill Group</button></div><div id="skillEditor" class="editor-list"></div></section>
+      <section id="panel-timeline" class="panel"><div class="section-heading"><div><h2>Career Timeline</h2><p>Manage milestone posts shown below your experience.</p></div><button class="secondary add-btn" data-add="timeline">+ Add Milestone</button></div><div id="timelineEditor" class="editor-list"></div></section>
+      <section id="panel-education" class="panel"><div class="section-heading"><div><h2>Education</h2><p>Manage schools, degrees, courses, and training entries.</p></div><button class="secondary add-btn" data-add="education">+ Add Education</button></div><div id="educationEditor" class="editor-list"></div></section>
+      <section id="panel-certifications" class="panel"><div class="section-heading"><div><h2>Certifications & Training</h2><p>Add credentials that appear under Education.</p></div><button class="secondary add-btn" data-add="certification">+ Add Certification</button></div><div id="certEditor" class="editor-list"></div></section>
+      <section id="panel-gallery" class="panel"><div class="section-heading"><div><h2>Project Gallery</h2><p>Upload screenshots or portfolio images.</p></div><button class="secondary add-btn" data-add="gallery">+ Add Gallery Item</button></div><div id="galleryEditor" class="gallery-editor"></div></section>
+      <section id="panel-messages" class="panel"><div class="section-heading"><div><h2>Messages</h2><p>Messages sent from your public contact form appear here.</p></div><button id="refreshMessages" class="secondary">↻ Refresh</button></div><div id="messagesEditor" class="messages-list"></div></section>
+      <section id="panel-account" class="panel"><div class="section-heading"><div><h2>Account Security</h2><p>Change the admin username and password.</p></div></div><form id="accountForm" class="admin-card account-form"><label>Admin username<input name="username" required /></label><label>Current password<input type="password" name="currentPassword" autocomplete="current-password" required /></label><label>New password<input type="password" name="newPassword" minlength="10" autocomplete="new-password" required /><small>At least 10 characters.</small></label><label>Confirm new password<input type="password" name="confirmPassword" minlength="10" autocomplete="new-password" required /></label><button class="primary" type="submit">Update Login</button><span id="accountStatus"></span></form></section>
+    </main>
+  </div>
+  <script src="admin.js"></script>
+</body>
+</html>
