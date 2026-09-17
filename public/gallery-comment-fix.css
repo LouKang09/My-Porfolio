@@ -1,0 +1,121 @@
+/* Safety layer for the Project Gallery comment composer.
+   Loaded after gallery-social.css so these rules only override the mobile
+   keyboard/problem cases without changing the normal desktop design. */
+
+body.gallery-modal-open {
+  touch-action: auto !important;
+}
+
+.gallery-photo-stage {
+  touch-action: none;
+}
+
+.gallery-social-panel,
+.gallery-comments,
+.gallery-comment-form {
+  touch-action: pan-y;
+}
+
+.gallery-comment-form input,
+.gallery-comment-form textarea,
+.gallery-comment-form button,
+.gallery-comment-action {
+  touch-action: manipulation;
+}
+
+.gallery-comment-form {
+  position: relative;
+  z-index: 4;
+  flex: 0 0 auto;
+}
+
+/* Never hide the visitor-name field. The previous short-screen rule hid a
+   required input exactly when the mobile keyboard reduced viewport height. */
+@media (max-height: 680px) and (max-width: 900px) {
+  .gallery-comment-form > input {
+    display: block !important;
+    min-height: 32px;
+    margin-bottom: 4px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery-viewer-shell {
+    height: var(--gallery-visual-height, 100dvh) !important;
+    max-height: var(--gallery-visual-height, 100dvh) !important;
+  }
+
+  .gallery-social-panel {
+    overscroll-behavior: contain;
+  }
+
+  .gallery-comments {
+    min-height: 48px;
+  }
+
+  body.gallery-keyboard-open .gallery-viewer-shell {
+    grid-template-rows: minmax(120px, 30vh) minmax(0, 1fr) !important;
+  }
+
+  body.gallery-keyboard-open .gallery-photo-stage {
+    min-height: 120px;
+  }
+
+  body.gallery-keyboard-open .gallery-social-header {
+    padding-top: 5px;
+    padding-bottom: 4px;
+  }
+
+  body.gallery-keyboard-open .gallery-engagement-summary,
+  body.gallery-keyboard-open .gallery-longpress-hint,
+  body.gallery-keyboard-open .gallery-comments-title {
+    display: none;
+  }
+
+  body.gallery-keyboard-open .gallery-reaction-action {
+    padding-top: 3px;
+    padding-bottom: 3px;
+  }
+
+  body.gallery-keyboard-open .gallery-comments {
+    min-height: 36px;
+    padding-bottom: 4px;
+  }
+
+  body.gallery-keyboard-open .gallery-comment-form {
+    padding-bottom: max(8px, env(safe-area-inset-bottom));
+  }
+
+  body.gallery-keyboard-open .gallery-nav {
+    top: 15vh;
+  }
+}
+
+@media (max-width: 540px) {
+  .gallery-comment-form > input,
+  .gallery-comment-row textarea {
+    font-size: 16px !important;
+  }
+
+  /* 16px prevents mobile browsers from zooming the page when an input gets
+     focus, which is especially disruptive inside Facebook's in-app browser. */
+  .gallery-comment-form > input {
+    min-height: 36px;
+  }
+
+  .gallery-comment-row textarea {
+    min-height: 40px;
+    max-height: 82px;
+    resize: none;
+  }
+
+  body.gallery-keyboard-open .gallery-viewer-shell {
+    grid-template-rows: minmax(92px, 24vh) minmax(0, 1fr) !important;
+  }
+
+  body.gallery-keyboard-open .gallery-nav {
+    top: 12vh;
+  }
+}
