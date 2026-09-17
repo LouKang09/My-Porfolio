@@ -1,0 +1,13 @@
+{
+  "name": "facebook-resume-cms",
+  "version": "2.3.2",
+  "private": true,
+  "description": "Facebook-inspired resume portfolio with a secure admin CMS, uploads, searchable public profile, and Railway-ready persistent storage.",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
