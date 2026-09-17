@@ -10,6 +10,7 @@
   <meta name="description" content="A social-profile inspired professional resume and portfolio." />
   <title>Resume & Portfolio</title>
   <link rel="stylesheet" href="styles.css?v=232" />
+  <link rel="stylesheet" href="/gallery-social.css?v=240" />
 </head>
 <body>
   <header class="topbar">
@@ -63,7 +64,7 @@
         <section id="projects" class="card section-anchor"><div class="card-heading"><div><h2>Featured Projects</h2><p>Selected systems and products I’ve worked on.</p></div><span>&lt;/&gt;</span></div><div id="projectGrid" class="project-grid"></div></section>
         <div id="experience" class="section-anchor"></div>
         <section class="card timeline-card"><div class="card-heading"><div><h2>Career Timeline</h2><p>Milestones presented like professional updates.</p></div><span>◷</span></div><div id="timelineContainer" class="timeline"></div><button id="timelineToggle" class="full-btn">See more milestones</button></section>
-        <section class="card gallery-card"><div class="card-heading"><div><h2>Project Gallery</h2><p>Selected screenshots and work samples.</p></div></div><div id="galleryGrid" class="gallery-grid"></div></section>
+        <section class="card gallery-card"><div class="card-heading"><div><h2>Project Gallery</h2><p>Selected screenshots and work samples. Click a photo to view, react, and comment.</p></div></div><div id="galleryGrid" class="gallery-grid"></div></section>
         <section id="contact" class="card contact-card section-anchor">
           <div class="contact-copy"><span class="eyebrow">LET’S CONNECT</span><h2>Have a system, website, or automation idea?</h2><p>Send a message here. It will appear privately in the admin dashboard.</p><div class="contact-points"><span>✉ <span data-bind="email"></span></span><span>⌖ <span data-bind="location"></span></span></div></div>
           <form id="contactForm"><label>Name<input required name="name" maxlength="120" placeholder="Your name" /></label><label>Email<input required type="email" name="email" maxlength="200" placeholder="you@example.com" /></label><label>Subject<input name="subject" maxlength="200" placeholder="Project inquiry" /></label><label>Message<textarea required name="message" maxlength="5000" rows="5" placeholder="Tell me about your project..."></textarea></label><button class="primary-btn" type="submit">➤ Send Message</button><small id="formStatus" class="success"></small></form>
@@ -74,5 +75,6 @@
 
   <footer><div><span class="brand-mark small" data-bind="initials">MK</span><strong data-bind="name">Resume</strong></div><p>Social-profile inspired professional resume</p><div class="footer-actions"><a href="/admin.html">Admin</a><button class="nav-target" data-target="overview">Back to top</button></div></footer>
   <script src="/app-v2.3.2.js?v=232"></script>
+  <script src="/gallery-social.js?v=240"></script>
 </body>
 </html>
