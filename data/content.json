@@ -1,0 +1,189 @@
+{
+  "profile": {
+    "name": "Marlou Kong",
+    "initials": "MK",
+    "headline": "Full-Stack Developer • Excel VBA Automation • POS Systems",
+    "location": "Cebu, Philippines",
+    "email": "your.email@example.com",
+    "website": "yourportfolio.com",
+    "availability": "Open to projects and collaboration",
+    "about": "Developer focused on building usable business software—from Excel VBA systems to modern web applications, databases, and cloud deployment.",
+    "profilePhoto": "",
+    "coverPhoto": "",
+    "coverEyebrow": "BUILD • AUTOMATE • DEPLOY",
+    "coverTitle": "Practical software for real operations.",
+    "social": {
+      "github": "#",
+      "linkedin": "#",
+      "facebook": "#"
+    },
+    "resumeFile": "",
+    "resumeFileName": ""
+  },
+  "skills": {
+    "Frontend": [
+      "React",
+      "Vite",
+      "JavaScript",
+      "HTML5",
+      "CSS3",
+      "Responsive UI"
+    ],
+    "Backend": [
+      "Node.js",
+      "Express",
+      "REST APIs",
+      "Authentication"
+    ],
+    "Database": [
+      "PostgreSQL",
+      "Prisma ORM",
+      "Data Modeling"
+    ],
+    "Automation": [
+      "Excel VBA",
+      "PDF Reporting",
+      "Email Automation",
+      "Inventory Logic"
+    ],
+    "Deployment": [
+      "GitHub",
+      "Railway",
+      "Environment Configuration"
+    ]
+  },
+  "experiences": [
+    {
+      "role": "Business Systems Developer",
+      "company": "Independent Projects",
+      "period": "2025 – Present",
+      "description": "Designing and building operational software for small businesses and organizations, with emphasis on POS workflows, reporting, inventory, automation, and maintainable administration tools.",
+      "bullets": [
+        "Built POS workflows with role-based controls, payment handling, sales logs, and reporting.",
+        "Automated inventory deduction, replenishment, transfers, costing, and audit logs.",
+        "Migrated spreadsheet-driven workflows toward deployable web applications."
+      ]
+    },
+    {
+      "role": "Excel VBA Automation Developer",
+      "company": "Operations & Reporting Systems",
+      "period": "2024 – Present",
+      "description": "Created advanced Excel applications with dynamic forms, structured data sheets, PDF exports, automated email reports, backups, restore tools, and dashboards.",
+      "bullets": [
+        "Developed dynamic product and ingredient management interfaces.",
+        "Created daily, weekly, monthly, and yearly reporting workflows.",
+        "Implemented backup, restore, logging, costing, and stock validation logic."
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "title": "Coffee Shop POS System",
+      "type": "POS • Inventory • Reporting",
+      "icon": "☕",
+      "accent": "coffee",
+      "description": "A full business system covering orders, product availability, ingredient-level inventory, promos, costing, transfers, replenishment, backups, PDF reports, and transaction audit logs.",
+      "stack": [
+        "Excel VBA",
+        "Automation",
+        "Reporting"
+      ],
+      "status": "Production workflow",
+      "link": "",
+      "image": "",
+      "sourceLink": ""
+    },
+    {
+      "title": "Laundry POS Web Application",
+      "type": "Full-Stack Web App",
+      "icon": "🧺",
+      "accent": "blue",
+      "description": "A modern POS application designed around React, Node.js, Express, PostgreSQL, Prisma, role-based access, business logic, testing, GitHub, and Railway deployment.",
+      "stack": [
+        "React",
+        "Node.js",
+        "PostgreSQL",
+        "Prisma"
+      ],
+      "status": "Full-stack project",
+      "link": "",
+      "image": "",
+      "sourceLink": ""
+    },
+    {
+      "title": "Parish Website & Management Experience",
+      "type": "Website • Content Management",
+      "icon": "⛪",
+      "accent": "gold",
+      "description": "A parish-focused website concept with editable brand content, contact information, leadership hierarchy, profile photos, and organization management.",
+      "stack": [
+        "Web UI",
+        "UI/UX",
+        "Content Management"
+      ],
+      "status": "Web project",
+      "link": "",
+      "image": "",
+      "sourceLink": ""
+    }
+  ],
+  "timeline": [
+    {
+      "date": "September 2026",
+      "title": "Expanded into full-stack web development",
+      "text": "Started converting operational systems from spreadsheet-based workflows into deployable web applications using modern frontend, backend, database, GitHub, and Railway tooling.",
+      "tag": "Career milestone"
+    },
+    {
+      "date": "August 2026",
+      "title": "Completed advanced POS reporting automation",
+      "text": "Built automated sales reports with product aggregation, transaction logs, costing visibility, PDF generation, and email delivery workflows.",
+      "tag": "Automation"
+    },
+    {
+      "date": "2025 – 2026",
+      "title": "Developed inventory and costing systems",
+      "text": "Implemented ingredient-level stock control, product availability logic, transfer and replenishment tracking, promo rules, and operational dashboards.",
+      "tag": "Business systems"
+    }
+  ],
+  "education": [
+    {
+      "school": "Add your school or university",
+      "course": "Add your degree, course, or professional training",
+      "period": "Year – Year",
+      "note": "Replace this sample from the admin dashboard."
+    }
+  ],
+  "certifications": [
+    "Add your certification or training",
+    "Add another credential",
+    "Add workshops, bootcamps, or specialized training"
+  ],
+  "gallery": [
+    {
+      "title": "POS Dashboard",
+      "image": ""
+    },
+    {
+      "title": "Inventory",
+      "image": ""
+    },
+    {
+      "title": "Reports",
+      "image": ""
+    },
+    {
+      "title": "Web App",
+      "image": ""
+    },
+    {
+      "title": "Admin",
+      "image": ""
+    },
+    {
+      "title": "Analytics",
+      "image": ""
+    }
+  ]
+}
