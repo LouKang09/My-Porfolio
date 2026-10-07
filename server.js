@@ -11,6 +11,7 @@ const STORAGE_ROOT = process.env.STORAGE_DIR ? path.resolve(process.env.STORAGE_
 const DATA_DIR = process.env.STORAGE_DIR ? path.join(STORAGE_ROOT, 'data') : BUNDLED_DATA_DIR;
 const UPLOAD_DIR = process.env.STORAGE_DIR ? path.join(STORAGE_ROOT, 'uploads') : path.join(ROOT, 'uploads');
 const CONTENT_FILE = path.join(DATA_DIR, 'content.json');
+const PROJECT_ADDITIONS_FILE = path.join(BUNDLED_DATA_DIR, 'project-additions.json');
 const MESSAGES_FILE = path.join(DATA_DIR, 'messages.json');
 const AUTH_FILE = path.join(DATA_DIR, 'admin-auth.json');
 const PORT = Number(process.env.PORT || 3000);
@@ -80,6 +81,57 @@ async function ensureStorageFiles() {
     try { await fsp.access(MESSAGES_FILE); } catch { await fsp.writeFile(MESSAGES_FILE, '[]\n'); }
   }
 }
+async function mergeProjectAdditions() {
+  const additions = await readJson(PROJECT_ADDITIONS_FILE, { projects: [], gallery: [] });
+  if (!additions || (!Array.isArray(additions.projects) && !Array.isArray(additions.gallery))) return;
+
+  const content = await readJson(CONTENT_FILE, {});
+  content.projects = Array.isArray(content.projects) ? content.projects : [];
+  content.gallery = Array.isArray(content.gallery) ? content.gallery : [];
+  let changed = false;
+
+  const normalize = value => String(value || '').trim().toLowerCase();
+
+  for (const project of additions.projects || []) {
+    const title = normalize(project.title);
+    const index = content.projects.findIndex(item =>
+      normalize(item.title) === title ||
+      (project.sourceLink && String(item.sourceLink || '').trim() === String(project.sourceLink).trim())
+    );
+    if (index === -1) {
+      content.projects.push(project);
+      changed = true;
+    } else {
+      const merged = { ...content.projects[index], ...project };
+      if (JSON.stringify(merged) !== JSON.stringify(content.projects[index])) {
+        content.projects[index] = merged;
+        changed = true;
+      }
+    }
+  }
+
+  for (const item of additions.gallery || []) {
+    const title = normalize(item.title);
+    const index = content.gallery.findIndex(existing => normalize(existing.title) === title);
+    if (index === -1) {
+      content.gallery.push(item);
+      changed = true;
+    } else {
+      const merged = { ...content.gallery[index], ...item };
+      if (JSON.stringify(merged) !== JSON.stringify(content.gallery[index])) {
+        content.gallery[index] = merged;
+        changed = true;
+      }
+    }
+  }
+
+  if (changed) {
+    await backupContent();
+    await atomicJson(CONTENT_FILE, content);
+    console.log('Portfolio project additions merged into persistent content.');
+  }
+}
+
 async function ensureAuthFile() {
   try { await fsp.access(AUTH_FILE); }
   catch {
@@ -285,7 +337,7 @@ async function handler(req, res) {
 }
 
 (async () => {
-  await ensureStorageFiles(); await ensureAuthFile();
+  await ensureStorageFiles(); await mergeProjectAdditions(); await ensureAuthFile();
   const server = http.createServer(handler); server.listen(PORT, HOST, () => {
     console.log(`Resume CMS running at http://localhost:${PORT}`);
     if (!process.env.ADMIN_PASSWORD) console.log('Initial admin login: admin / ChangeMe123!  (change it after first login)');
