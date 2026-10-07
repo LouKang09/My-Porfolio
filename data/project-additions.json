@@ -1,0 +1,72 @@
+{
+  "projects": [
+    {
+      "title": "Don Macchiatos Web POS",
+      "type": "POS • Inventory • Reporting",
+      "icon": "☕",
+      "accent": "coffee",
+      "description": "A hardened web-based coffee shop POS migrated from an Excel/VBA workflow. It includes Cash and GCash checkout, promo and Senior Citizen discount rules, ingredient-level stock deduction, replenishment and transfers, recipes and costing, sales reports, PDF/email reporting, transaction audit, users, security, and backup/restore tools.",
+      "stack": [
+        "JavaScript",
+        "Node.js",
+        "SQLite / PostgreSQL",
+        "POS System",
+        "Inventory"
+      ],
+      "status": "Production-ready web migration",
+      "link": "",
+      "image": "data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='675' viewBox='0 0 1200 675'%3E%3Crect width='1200' height='675' fill='%23f4f1eb'/%3E%3Crect width='220' height='675' fill='%2314261f'/%3E%3Crect x='24' y='28' width='52' height='52' rx='15' fill='%231f5a43'/%3E%3Ctext x='50' y='61' text-anchor='middle' font-family='Arial' font-size='17' font-weight='700' fill='white'%3EDM%3C/text%3E%3Ctext x='92' y='48' font-family='Arial' font-size='19' font-weight='700' fill='white'%3EDon Macchiatos%3C/text%3E%3Ctext x='92' y='69' font-family='Arial' font-size='12' fill='%239fb3aa'%3EWeb POS%3C/text%3E%3Crect x='16' y='120' width='188' height='45' rx='11' fill='%23224337'/%3E%3Ctext x='42' y='148' font-family='Arial' font-size='14' fill='white'%3E▦  POS%3C/text%3E%3Ctext x='42' y='202' font-family='Arial' font-size='14' fill='%23b8c8c1'%3E▤  Inventory%3C/text%3E%3Ctext x='42' y='252' font-family='Arial' font-size='14' fill='%23b8c8c1'%3E▥  Reports%3C/text%3E%3Ctext x='42' y='302' font-family='Arial' font-size='14' fill='%23b8c8c1'%3E◇  Catalog Admin%3C/text%3E%3Ctext x='250' y='54' font-family='Arial' font-size='13' font-weight='700' fill='%237d857f'%3EPOINT OF SALE%3C/text%3E%3Ctext x='250' y='84' font-family='Arial' font-size='27' font-weight='700' fill='%2317231e'%3ENew Order%3C/text%3E%3Crect x='250' y='112' width='620' height='530' rx='20' fill='white' stroke='%23e7e1d7'/%3E%3Crect x='282' y='145' width='94' height='38' rx='10' fill='%231f5a43'/%3E%3Ctext x='329' y='169' text-anchor='middle' font-family='Arial' font-size='13' font-weight='700' fill='white'%3ECoffee%3C/text%3E%3Crect x='390' y='145' width='110' height='38' rx='10' fill='%23fbfaf7' stroke='%23e7e1d7'/%3E%3Ctext x='445' y='169' text-anchor='middle' font-family='Arial' font-size='13' fill='%2359645e'%3ENon Coffee%3C/text%3E%3Crect x='514' y='145' width='78' height='38' rx='10' fill='%23fbfaf7' stroke='%23e7e1d7'/%3E%3Ctext x='553' y='169' text-anchor='middle' font-family='Arial' font-size='13' fill='%2359645e'%3EFood%3C/text%3E%3Cg font-family='Arial'%3E%3Crect x='282' y='215' width='170' height='140' rx='16' fill='%23fbfaf7' stroke='%23e7e1d7'/%3E%3Ctext x='300' y='245' font-size='11' fill='%23849088'%3ECOFFEE%3C/text%3E%3Ctext x='300' y='286' font-size='17' font-weight='700' fill='%2317231e'%3EDON DARKO%3C/text%3E%3Ctext x='300' y='330' font-size='18' font-weight='700' fill='%231f5a43'%3E₱49%3C/text%3E%3Crect x='470' y='215' width='170' height='140' rx='16' fill='%23fbfaf7' stroke='%23e7e1d7'/%3E%3Ctext x='488' y='245' font-size='11' fill='%23849088'%3ECOFFEE%3C/text%3E%3Ctext x='488' y='286' font-size='16' font-weight='700' fill='%2317231e'%3ECARAMEL%3C/text%3E%3Ctext x='488' y='306' font-size='16' font-weight='700' fill='%2317231e'%3EMACCHIATO%3C/text%3E%3Ctext x='488' y='330' font-size='18' font-weight='700' fill='%231f5a43'%3E₱39%3C/text%3E%3Crect x='658' y='215' width='170' height='140' rx='16' fill='%23fbfaf7' stroke='%23e7e1d7'/%3E%3Ctext x='676' y='245' font-size='11' fill='%23849088'%3ECOFFEE%3C/text%3E%3Ctext x='676' y='286' font-size='16' font-weight='700' fill='%2317231e'%3EDON MATCHATOS%3C/text%3E%3Ctext x='676' y='330' font-size='18' font-weight='700' fill='%231f5a43'%3E₱49%3C/text%3E%3Crect x='282' y='375' width='170' height='140' rx='16' fill='%23fbfaf7' stroke='%23e7e1d7'/%3E%3Ctext x='300' y='405' font-size='11' fill='%23849088'%3EFOOD%3C/text%3E%3Ctext x='300' y='446' font-size='16' font-weight='700' fill='%2317231e'%3ECLASSIC WAFFLE%3C/text%3E%3Ctext x='300' y='490' font-size='18' font-weight='700' fill='%231f5a43'%3E₱39%3C/text%3E%3C/g%3E%3Crect x='895' y='112' width='275' height='530' rx='20' fill='white' stroke='%23e7e1d7'/%3E%3Ctext x='922' y='152' font-family='Arial' font-size='13' font-weight='700' fill='%237d857f'%3ECURRENT ORDER%3C/text%3E%3Ctext x='922' y='184' font-family='Arial' font-size='22' font-weight='700' fill='%2317231e'%3EOrder Items%3C/text%3E%3Ctext x='922' y='242' font-family='Arial' font-size='15' font-weight='700' fill='%2317231e'%3EDON DARKO × 2%3C/text%3E%3Ctext x='1140' y='242' text-anchor='end' font-family='Arial' font-size='15' fill='%2317231e'%3E₱98%3C/text%3E%3Cline x1='922' y1='272' x2='1140' y2='272' stroke='%23eee9e1'/%3E%3Ctext x='922' y='316' font-family='Arial' font-size='15' font-weight='700' fill='%2317231e'%3ECLASSIC WAFFLE × 2%3C/text%3E%3Ctext x='1140' y='316' text-anchor='end' font-family='Arial' font-size='15' fill='%2317231e'%3E₱78%3C/text%3E%3Ctext x='922' y='455' font-family='Arial' font-size='13' fill='%236b746f'%3EGross%3C/text%3E%3Ctext x='1140' y='455' text-anchor='end' font-family='Arial' font-size='15' fill='%2317231e'%3E₱193.00%3C/text%3E%3Ctext x='922' y='489' font-family='Arial' font-size='13' fill='%236b746f'%3EAdjustment%3C/text%3E%3Ctext x='1140' y='489' text-anchor='end' font-family='Arial' font-size='15' fill='%23a43d35'%3E-₱33.00%3C/text%3E%3Ctext x='922' y='530' font-family='Arial' font-size='16' font-weight='700' fill='%2317231e'%3EActual%3C/text%3E%3Ctext x='1140' y='530' text-anchor='end' font-family='Arial' font-size='22' font-weight='700' fill='%2317231e'%3E₱160.00%3C/text%3E%3Crect x='922' y='558' width='218' height='52' rx='12' fill='%231f5a43'/%3E%3Ctext x='1031' y='590' text-anchor='middle' font-family='Arial' font-size='16' font-weight='700' fill='white'%3EPay ₱160.00%3C/text%3E%3C/svg%3E",
+      "sourceLink": "https://github.com/LouKang09/DON-MAC-V2"
+    },
+    {
+      "title": "BrewPoint – Coffee Shop POS SaaS",
+      "type": "SaaS • POS • Back Office",
+      "icon": "☕",
+      "accent": "coffee",
+      "description": "A multi-tenant cloud POS and back-office platform built for coffee shops. BrewPoint includes Cash and GCash checkout, recipe-based ingredient deduction, inventory and costing, expenses, reports, customers, promotions, staff and branch management, subscription controls, and a platform-owner landlord console.",
+      "stack": [
+        "React",
+        "Vite",
+        "Node.js",
+        "PostgreSQL",
+        "Multi-Tenant SaaS"
+      ],
+      "status": "Deployed on Railway",
+      "link": "https://brewpoint-web-production.up.railway.app/",
+      "image": "https://image.thum.io/get/width/1200/crop/720/noanimate/https://brewpoint-web-production.up.railway.app/",
+      "sourceLink": "https://github.com/LouKang09/BrewPoint"
+    },
+    {
+      "title": "Scrapella – Private Social Scrapbook",
+      "type": "Social App • Scrapbook • Android",
+      "icon": "📖",
+      "accent": "blue",
+      "description": "A private social scrapbook and memory platform for couples, families, and groups. Scrapella includes profiles and unique @tags, private invitations and membership, book-style journal pages, Memory Stream, shared posts, photo editing and text wrapping, responsive layouts, persistent accounts and media, and an Android wrapper connected to the production Railway backend.",
+      "stack": [
+        "JavaScript",
+        "Node.js",
+        "Capacitor",
+        "Responsive Web",
+        "Railway"
+      ],
+      "status": "Live web app + Android build",
+      "link": "https://scrapella.com/",
+      "image": "https://image.thum.io/get/width/1200/crop/720/noanimate/https://scrapella.com/",
+      "sourceLink": "https://github.com/LouKang09/Our-Love-Story"
+    }
+  ],
+  "gallery": [
+    {
+      "title": "Don Macchiatos – POS Interface",
+      "image": "data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='675' viewBox='0 0 1200 675'%3E%3Crect width='1200' height='675' fill='%23f4f1eb'/%3E%3Crect width='220' height='675' fill='%2314261f'/%3E%3Crect x='24' y='28' width='52' height='52' rx='15' fill='%231f5a43'/%3E%3Ctext x='50' y='61' text-anchor='middle' font-family='Arial' font-size='17' font-weight='700' fill='white'%3EDM%3C/text%3E%3Ctext x='92' y='48' font-family='Arial' font-size='19' font-weight='700' fill='white'%3EDon Macchiatos%3C/text%3E%3Ctext x='92' y='69' font-family='Arial' font-size='12' fill='%239fb3aa'%3EWeb POS%3C/text%3E%3Crect x='16' y='120' width='188' height='45' rx='11' fill='%23224337'/%3E%3Ctext x='42' y='148' font-family='Arial' font-size='14' fill='white'%3E▦  POS%3C/text%3E%3Ctext x='42' y='202' font-family='Arial' font-size='14' fill='%23b8c8c1'%3E▤  Inventory%3C/text%3E%3Ctext x='42' y='252' font-family='Arial' font-size='14' fill='%23b8c8c1'%3E▥  Reports%3C/text%3E%3Ctext x='250' y='54' font-family='Arial' font-size='13' font-weight='700' fill='%237d857f'%3EPOINT OF SALE%3C/text%3E%3Ctext x='250' y='84' font-family='Arial' font-size='27' font-weight='700' fill='%2317231e'%3ENew Order%3C/text%3E%3Crect x='250' y='112' width='620' height='530' rx='20' fill='white' stroke='%23e7e1d7'/%3E%3Crect x='282' y='145' width='94' height='38' rx='10' fill='%231f5a43'/%3E%3Ctext x='329' y='169' text-anchor='middle' font-family='Arial' font-size='13' font-weight='700' fill='white'%3ECoffee%3C/text%3E%3Crect x='282' y='215' width='170' height='140' rx='16' fill='%23fbfaf7' stroke='%23e7e1d7'/%3E%3Ctext x='300' y='245' font-family='Arial' font-size='11' fill='%23849088'%3ECOFFEE%3C/text%3E%3Ctext x='300' y='286' font-family='Arial' font-size='17' font-weight='700' fill='%2317231e'%3EDON DARKO%3C/text%3E%3Ctext x='300' y='330' font-family='Arial' font-size='18' font-weight='700' fill='%231f5a43'%3E₱49%3C/text%3E%3Crect x='470' y='215' width='170' height='140' rx='16' fill='%23fbfaf7' stroke='%23e7e1d7'/%3E%3Ctext x='488' y='245' font-family='Arial' font-size='11' fill='%23849088'%3ECOFFEE%3C/text%3E%3Ctext x='488' y='286' font-family='Arial' font-size='16' font-weight='700' fill='%2317231e'%3ECARAMEL MACCHIATO%3C/text%3E%3Ctext x='488' y='330' font-family='Arial' font-size='18' font-weight='700' fill='%231f5a43'%3E₱39%3C/text%3E%3Crect x='895' y='112' width='275' height='530' rx='20' fill='white' stroke='%23e7e1d7'/%3E%3Ctext x='922' y='152' font-family='Arial' font-size='13' font-weight='700' fill='%237d857f'%3ECURRENT ORDER%3C/text%3E%3Ctext x='922' y='184' font-family='Arial' font-size='22' font-weight='700' fill='%2317231e'%3EOrder Items%3C/text%3E%3Ctext x='922' y='455' font-family='Arial' font-size='13' fill='%236b746f'%3EGross%3C/text%3E%3Ctext x='1140' y='455' text-anchor='end' font-family='Arial' font-size='15' fill='%2317231e'%3E₱193.00%3C/text%3E%3Ctext x='922' y='489' font-family='Arial' font-size='13' fill='%236b746f'%3EAdjustment%3C/text%3E%3Ctext x='1140' y='489' text-anchor='end' font-family='Arial' font-size='15' fill='%23a43d35'%3E-₱33.00%3C/text%3E%3Ctext x='922' y='530' font-family='Arial' font-size='16' font-weight='700' fill='%2317231e'%3EActual%3C/text%3E%3Ctext x='1140' y='530' text-anchor='end' font-family='Arial' font-size='22' font-weight='700' fill='%2317231e'%3E₱160.00%3C/text%3E%3Crect x='922' y='558' width='218' height='52' rx='12' fill='%231f5a43'/%3E%3Ctext x='1031' y='590' text-anchor='middle' font-family='Arial' font-size='16' font-weight='700' fill='white'%3EPay ₱160.00%3C/text%3E%3C/svg%3E"
+    },
+    {
+      "title": "BrewPoint – Live POS SaaS Preview",
+      "image": "https://image.thum.io/get/width/1200/crop/720/noanimate/https://brewpoint-web-production.up.railway.app/"
+    },
+    {
+      "title": "Scrapella – Live Social Scrapbook Preview",
+      "image": "https://image.thum.io/get/width/1200/crop/720/noanimate/https://scrapella.com/"
+    }
+  ]
+}
